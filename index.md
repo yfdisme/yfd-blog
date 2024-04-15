@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: brand
       text: 起步
-      link: /guide/markdown-examples
+      link: /guide/vitepress-start
     - theme: alt
       text: API Examples
       link: /api-examples

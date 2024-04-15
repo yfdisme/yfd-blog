@@ -16,7 +16,7 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '首页', link: '/' },
-      { text: '参考', link: '/markdown-examples' }
+      { text: '参考', link: '/vitepress-start' }
     ],
 
     sidebar: [
@@ -25,7 +25,7 @@ export default defineConfig({
         collapsed: true,
         base: '/guide/',
         items: [
-          { text: '起步', link: 'markdown-examples' },
+          { text: '起步', link: 'vitepress-start' },
           { text: 'Runtime API Examples', link: '/api-examples' }
         ]
       }
