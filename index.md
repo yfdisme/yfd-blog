@@ -8,8 +8,8 @@ hero:
   tagline: 将 Markdown 变成优雅的文档，只需几分钟
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: 起步
+      link: /guide/markdown-examples
     - theme: alt
       text: API Examples
       link: /api-examples

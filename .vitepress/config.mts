@@ -21,9 +21,11 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: 'Examples',
+        text: 'vitepress搭建博客',
+        collapsed: true,
+        base: '/guide/',
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
+          { text: '起步', link: 'markdown-examples' },
           { text: 'Runtime API Examples', link: '/api-examples' }
         ]
       }
