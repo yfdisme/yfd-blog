@@ -35,7 +35,8 @@ export default defineConfig({
         base: '/springboot/',
         items: [
           { text: 'spring-boot日志', link: 'spring_boot_log' },
-          { text: 'spring-boot切面', link: 'spring_boot_aop' }
+          { text: 'spring-boot切面', link: 'spring_boot_aop' },
+          { text: 'spring-boot异常', link: 'spring_boot_exception' }
         ]
       }
     ],
