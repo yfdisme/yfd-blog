@@ -16,7 +16,7 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '首页', link: '/' },
-      { text: '参考', link: '/vitepress-start' }
+      { text: '参考', link: '/guide/vitepress-start' }
     ],
 
     sidebar: [
@@ -26,6 +26,15 @@ export default defineConfig({
         base: '/guide/',
         items: [
           { text: '起步', link: 'vitepress-start' },
+          { text: 'Runtime API Examples', link: '/api-examples' }
+        ]
+      },
+      {
+        text: 'SpringBoot',
+        collapsed: true,
+        base: '/springboot/',
+        items: [
+          { text: 'spring日志', link: 'spring_log' },
           { text: 'Runtime API Examples', link: '/api-examples' }
         ]
       }
