@@ -34,8 +34,8 @@ export default defineConfig({
         collapsed: true,
         base: '/springboot/',
         items: [
-          { text: 'spring日志', link: 'spring_log' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
+          { text: 'spring-boot日志', link: 'spring_boot_log' },
+          { text: 'spring-boot切面', link: 'spring_boot_aop' }
         ]
       }
     ],
