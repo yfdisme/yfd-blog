@@ -37,7 +37,8 @@ export default defineConfig({
           { text: 'spring-boot日志', link: 'spring_boot_log' },
           { text: 'spring-boot切面', link: 'spring_boot_aop' },
           { text: 'spring-boot异常', link: 'spring_boot_exception' },
-          { text: 'spring-boot JDBC', link: 'spring_boot_jdbcTemplades' }
+          { text: 'spring-boot JDBC', link: 'spring_boot_jdbcTemplades' },
+          { text: 'spring-boot Mybatis', link: 'spring_boot_mybatis' }
         ]
       }
     ],
