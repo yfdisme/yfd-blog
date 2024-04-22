@@ -96,4 +96,4 @@ public interface UserMapper {
 }
 
 ```
-5.反向生成代码使用esaycode 插件
+5. 反向生成代码使用esaycode 插件
