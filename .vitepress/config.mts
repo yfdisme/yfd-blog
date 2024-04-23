@@ -30,6 +30,16 @@ export default defineConfig({
         ]
       },
       {
+        text: 'vitepress搭建博客',
+        collapsed: true,
+        base: '/servlet/',
+        items: [
+          { text: 'servlet 快速入门', link: 'servlet_one' },
+          { text: 'servlet 生命周期', link: 'servlet_two' },
+          { text: 'servlet ', link: 'servlet_two' }
+        ]
+      },
+      {
         text: 'SpringBoot',
         collapsed: true,
         base: '/springboot/',
@@ -45,6 +55,8 @@ export default defineConfig({
         ]
       }
     ],
+
+
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/yfdisme/yfd-blog.git' }
