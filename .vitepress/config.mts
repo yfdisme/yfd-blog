@@ -34,7 +34,8 @@ export default defineConfig({
         collapsed: true,
         base: '/JavaEE/',
         items: [
-          { text: 'java SPI思想', link: 'java_spi.md' },
+          { text: 'java SPI思想', link: 'java_spi' },
+          { text: 'java JDBC', link: 'java_jdbc' }
         ]
       },
       {
