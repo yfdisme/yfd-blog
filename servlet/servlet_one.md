@@ -74,7 +74,7 @@ public class ServletDemo implements Servlet {
     </servlet-mapping>
 </web-app>
 ```
-4. 测试地址 http://localhost:8080/servlet_study/demo1
+4. 测试地址 `http://localhost:8080/servlet_study/demo1`
 5. 执行原理
 - 服务端收到请求后解析url
 - 找到web.xml中对应的servlet
