@@ -30,7 +30,15 @@ export default defineConfig({
         ]
       },
       {
-        text: 'vitepress搭建博客',
+        text: 'java ee',
+        collapsed: true,
+        base: '/JavaEE/',
+        items: [
+          { text: 'java SPI思想', link: 'java_spi.md' },
+        ]
+      },
+      {
+        text: 'Servlet',
         collapsed: true,
         base: '/servlet/',
         items: [
