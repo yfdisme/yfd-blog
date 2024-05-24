@@ -62,6 +62,14 @@ export default defineConfig({
           { text: 'spring-boot 监控及自定义', link: 'spring_boot_actuator' },
           { text: 'spring-boot 图形化监控', link: 'spring_boot_admin' }
         ]
+      },
+      {
+        text: 'GitLabCICD',
+        collapsed: true,
+        base: '/GitLabCICD/',
+        items: [
+          { text: 'gitlabcicd基础', link: 'gitlabcicd基础' }
+        ]
       }
     ],
 
