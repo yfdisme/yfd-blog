@@ -91,7 +91,11 @@ xxl.job.triggerpool.slow.max=100
 xxl.job.logretentiondays=30
 ```
 
-- 运行xxl-job-admin项目，启动成功访问 [xxl-job-admin](http://localhost:8080/xxl-job-admin)
+- 运行xxl-job-admin项目，启动成功访问 
+  ```text
+  http://localhost:8080/xxl-job-admin
+  ```
+
 
   默认登录账号 “admin/123456”
   ![img.png](static/img1.png)
