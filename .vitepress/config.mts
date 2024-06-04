@@ -70,6 +70,14 @@ export default defineConfig({
         items: [
           { text: 'gitlabcicd基础', link: 'gitlabcicd基础' }
         ]
+      },
+      {
+        text: '定时任务',
+        collapsed: true,
+        base: '/xxl-job/',
+        items: [
+          { text: 'xxl-job + springboot', link: 'xxl_job' }
+        ]
       }
     ],
 
