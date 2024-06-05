@@ -1,24 +1,37 @@
 # 一、
 
-官网[xxl-job](https://www.xuxueli.com/xxl-job)
+## 原理简介
+- XXL-JOB是一个轻量级分布式任务调度平台，其核心设计目标是开发迅速、学习简单、轻量级、易扩展。现已开放源代码并接入多家公司线上产品线，开箱即用。
+- 官网[xxl-job](https://www.xuxueli.com/xxl-job)
+- 文档：https://www.xuxueli.com/xxl-job/
+- XXL-JOB主要有调度中心、执行器、任务：
+![img_4.png](static/img_4.png)
+- 调度中心与执行器之间的工作流程如下
+![img_1.png](static/img_1.png)
+## 概念
 
+- 任务调度中心: 将调度行为抽象形成“调度中心”公共平台，而平台自身并不承担业务逻辑，“调度中心”负责发起调度请求。
+
+- 任务执行器: 将任务抽象成分散的JobHandler，交由“执行器”统一管理，“执行器”负责接收调度请求并执行对应的JobHandler中业务逻辑。
+
+- 任务：具体的定时任务在各自服务的模块中实现具体的逻辑
+
+- xxl-job 在项目中主要的功能就是处理定时任务
 ## 下载
 
 | 源码仓库地址 | Release Download                            |
 |--------|---------------------------------------------|
 | https://github.com/xuxueli/xxl-job   | https://github.com/xuxueli/xxl-job/releases |
 |   http://gitee.com/xuxueli0323/xxl-job     | http://gitee.com/xuxueli0323/xxl-job/releases                                            |
-
-## 概念
-
-任务调度中心: 将调度行为抽象形成“调度中心”公共平台，而平台自身并不承担业务逻辑，“调度中心”负责发起调度请求。
-
-任务执行器: 将任务抽象成分散的JobHandler，交由“执行器”统一管理，“执行器”负责接收调度请求并执行对应的JobHandler中业务逻辑。
-
-任务：具体的定时任务在各自服务的模块中实现具体的逻辑
-
-xxl-job 在项目中主要的功能就是处理定时任务
-
+## 准备
+下载项目后各个模块说明
+- xxl-job-admin：调度中心
+- xxl-job-core：公共依赖
+- xxl-job-executor-samples：执行器Sample示例（选择合适的版本执行器，可直接使用）
+  - ：xxl-job-executor-sample-springboot：Springboot版本，通过Springboot管理执行器，推荐这种方式；
+  - ：xxl-job-executor-sample-frameless：无框架版本；
+- doc :文档资料，包含数据库脚本
+- MySQL中已经创建了xxl_job数据库
 # 二、
 
 ## 任务调度中心：
