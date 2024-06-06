@@ -78,6 +78,14 @@ export default defineConfig({
         items: [
           { text: 'xxl-job + springboot', link: 'xxl_job' }
         ]
+      },
+      {
+        text: 'linux',
+        collapsed: true,
+        base: '/linux/',
+        items: [
+          { text: 'nginx', link: 'nginx' }
+        ]
       }
     ],
 
