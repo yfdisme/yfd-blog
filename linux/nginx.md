@@ -109,10 +109,12 @@ make
 make install
 ```
 
-5. 修改配置文件重启nginx . 
+5. 修改配置文件重启nginx .
+
 ```shell
 vi /usr/local/nginx/conf/nginx.conf
 ```
+
 ```shell
 #user  nobody;
 worker_processes  1;
@@ -273,20 +275,159 @@ http {
 }
 
 ```
+
 ```shell
 cd ../sbin
 ./nginx -t #检查配置文件格式是否正确
 ./nginx -s stop
 ./nginx
 ```
+
 6. 在本机浏览器配置代理
-![img.png](static/img_3.png)
-这里配置的是我的虚拟机地址
-![img.png](static/img_4.png)
+   ![img.png](static/img_3.png)
+   这里配置的是我的虚拟机地址
+   ![img.png](static/img_4.png)
 7. 测试
+
 ```shell
 curl https://www.baidu.com/ -v -x 192.168.211.128:443
 ```
+
 ![img.png](static/img_5.png)
 可以看到已经通过代理服务器访问到互联网
+
 ## 反向代理
+
+1. 配置nginx.conf
+
+```shell
+
+#user  nobody;
+worker_processes  1;
+
+#error_log  logs/error.log;
+#error_log  logs/error.log  notice;
+#error_log  logs/error.log  info;
+
+#pid        logs/nginx.pid;
+
+
+events {
+    worker_connections  1024;
+}
+
+
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+
+    #log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
+    #                  '$status $body_bytes_sent "$http_referer" '
+    #                  '"$http_user_agent" "$http_x_forwarded_for"';
+
+    #access_log  logs/access.log  main;
+
+    sendfile        on;
+    #tcp_nopush     on;
+
+    #keepalive_timeout  0;
+    keepalive_timeout  65;
+
+    #gzip  on;
+	
+	map $http_upgrade $connection_upgrade{
+		default upgrade;
+		'' close;
+	}
+
+	upstream webservers{
+	  server 127.0.0.1:8082 weight=90 ;
+	  #server 127.0.0.1:8088 weight=10 ;
+	}
+
+    server {
+        listen       8088;
+        server_name  localhost;
+
+        #charset koi8-r;
+
+        #access_log  logs/host.access.log  main;
+
+        location / {
+            root   html/sky;
+            index  index.html index.htm;
+        }
+
+        #error_page  404              /404.html;
+
+        # redirect server error pages to the static page /50x.html
+        #
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   html;
+        }
+
+        # 反向代理,处理管理端发送的请求
+        location /api/ {
+			proxy_pass   http://localhost:8080/admin/;
+            #proxy_pass   http://webservers/admin/;
+        }
+		
+		# 反向代理,处理用户端发送的请求
+        location /user/ {
+            proxy_pass   http://webservers/user/;
+        }
+    }
+	
+	 server {
+        listen       8087;
+        server_name  localhost;
+
+        #charset koi8-r;
+
+        #access_log  logs/host.access.log  main;
+
+        location / {
+             alias   html/dist/;
+			 index  index.html index.htm;
+        }
+
+        #error_page  404              /404.html;
+
+        # redirect server error pages to the static page /50x.html
+        #
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   html;
+        }
+
+
+        # 反向代理,处理管理端发送的请求
+        location /api/ {
+			proxy_pass   http://127.0.0.1:8999/;
+            #proxy_pass   http://webservers/admin/;
+        }
+		
+		# 反向代理,处理用户端发送的请求
+        location /user/ {
+            proxy_pass   http://webservers/user/;
+        }
+    }
+
+}
+
+```
+
+2. 配置内网穿透
+
+- 地址 https://natapp.cn/
+- ![img.png](static/img_6.png)
+- ![img.png](static/img_7.png)
+- ![img.png](static/img_8.png)
+
+3. 启动本地服务
+4. 浏览器访问
+
+```text
+http://b83hhc.natappfree.cc/api/proxy/testProxy
+```
