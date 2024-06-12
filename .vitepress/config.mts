@@ -92,7 +92,7 @@ export default defineConfig({
         collapsed: true,
         base: '/c_cPlus/',
         items: [
-          { text: 'nginx', link: 'nginx' }
+          { text: 'c环境搭建', link: 'c_one' }
         ]
       },
     ],

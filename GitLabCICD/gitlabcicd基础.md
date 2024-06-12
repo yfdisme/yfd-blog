@@ -1,5 +1,5 @@
 # GitLabCICD 入门
-
+[很好的课程](https://www.youtube.com/watch?v=-4XT8-znkuc&list=PLBd8JGCAcUAEwyH2kT1wW2BUmcSPQzGcu)
 1. 编写 .gitlab-ci.yml 文件
     - 创建项目后在项目中有.gitlab-ci.yml提交到gitlab后会自动跑流水线
 2. .gitlab-ci.yml 文件案例
