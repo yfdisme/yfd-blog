@@ -86,7 +86,15 @@ export default defineConfig({
         items: [
           { text: 'nginx', link: 'nginx' }
         ]
-      }
+      },
+      {
+        text: 'c&c++',
+        collapsed: true,
+        base: '/c_cPlus/',
+        items: [
+          { text: 'nginx', link: 'nginx' }
+        ]
+      },
     ],
 
 
