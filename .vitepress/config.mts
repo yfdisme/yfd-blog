@@ -76,7 +76,8 @@ export default defineConfig({
         collapsed: true,
         base: '/xxl-job/',
         items: [
-          { text: 'xxl-job + springboot', link: 'xxl_job' }
+          { text: 'xxl-job_00:基础认识', link: 'xxl_job' },
+          { text: 'xxl-job_01:其他功能', link: 'xxl_job_01' }
         ]
       },
       {
@@ -84,7 +85,8 @@ export default defineConfig({
         collapsed: true,
         base: '/linux/',
         items: [
-          { text: 'nginx', link: 'nginx' }
+          { text: 'nginx_00:基础认识', link: 'nginx' },
+          { text: 'nginx_01:配置负载均衡', link: 'nginx_01' }
         ]
       },
       {
