@@ -94,7 +94,8 @@ export default defineConfig({
         collapsed: true,
         base: '/c_cPlus/',
         items: [
-          { text: 'c环境搭建', link: 'c_one' }
+          { text: 'c环境搭建', link: 'c_one' },
+          { text: 'c其他基础知识', link: 'c_other' }
         ]
       },
     ],
