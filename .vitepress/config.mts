@@ -98,6 +98,14 @@ export default defineConfig({
           { text: 'c其他基础知识', link: 'c_other' }
         ]
       },
+      {
+        text: '微信相关',
+        collapsed: true,
+        base: '/wx/',
+        items: [
+          { text: '微信-公众号-网页授权', link: 'wx_gzh' },
+        ]
+      },
     ],
 
 
