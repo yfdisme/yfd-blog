@@ -1,4 +1,4 @@
-#一、获取测试公众账号及相关配置
+# 一、获取测试公众账号及相关配置
 1. 微信官方文档地址：
 `https://developers.weixin.qq.com/doc/offiaccount/Getting_Started/Overview.html`
 2. 测试账号地址`
@@ -8,7 +8,7 @@ http://mp.weixin.qq.com/debug/cgi-bin/sandboxinfo?action=showinfo&t=sandbox/inde
 ![img.png](static/img.png)
 4. 写域名+端口就可以 
 ![img_1.png](static/img_1.png)
-#二、认证流程
+# 二、认证流程
 1. 用户同意授权，获取code
 `https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx750c39f36cf3c82e&redirect_uri=http%3A%2F%2F59.110.44.176%3A8005%2Fwx%2Ftest&response_type=code&scope=snsapi_userinfo&state=123#wechat_redirect`
 ```text
