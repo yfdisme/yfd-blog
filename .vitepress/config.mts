@@ -106,6 +106,14 @@ export default defineConfig({
           { text: '微信-公众号-网页授权', link: 'wx_gzh' },
         ]
       },
+      {
+        text: '日记-2024',
+        collapsed: true,
+        base: '/day/',
+        items: [
+          { text: '2024-09-12', link: '2024-09-12' },
+        ]
+      },
     ],
 
 
