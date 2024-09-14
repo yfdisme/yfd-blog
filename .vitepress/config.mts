@@ -112,6 +112,7 @@ export default defineConfig({
         base: '/day/',
         items: [
           { text: '2024-09-12', link: '2024-09-12' },
+          { text: '2024-09-14', link: '2024-09-14' },
         ]
       },
     ],
