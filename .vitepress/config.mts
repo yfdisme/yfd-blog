@@ -113,6 +113,7 @@ export default defineConfig({
         items: [
           { text: '2024-09-12', link: '2024-09-12' },
           { text: '2024-09-14', link: '2024-09-14' },
+          { text: '2024-09-19', link: '2024-09-19' },
         ]
       },
     ],
